@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -31,4 +31,5 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class AngularMaterialModule { }
+export class AngularMaterialModule {    
+}

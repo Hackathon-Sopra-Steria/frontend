@@ -1,5 +1,16 @@
 <section class="container">
     <div class="login">
-        <h1>Login Works</h1>
+        <form class="login-form" [formGroup]="loginForm">
+            <mat-form-field class="">
+                <input matInput placeholder="" value="" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="">
+                <input matInput placeholder="" value="" formControlName="password">
+            </mat-form-field>
+
+            <button mat-button onSubmit="">Login</button>
+        </form>
+        
     </div>
 </section>
