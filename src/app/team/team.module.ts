@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamComponent } from './view/team.component';
-import { TeamRouting } from './view/team-routing.module';
+import { TeamRouting } from './team-routing.module';
 
 @NgModule({
   declarations: [
