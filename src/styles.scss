@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/angular-material/angular-material-theme.scss";
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("assets/fonts/Open_Sans/OpenSans-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("assets/fonts/Open_Sans/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  font-size: 0.95rem;
+  font-family: "Open Sans", Tahoma;
+  height: 100%;
+}
