@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule
   ],
   exports: [
     MatInputModule,
@@ -28,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatRadioModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule
   ]
 })
 export class AngularMaterialModule { }
