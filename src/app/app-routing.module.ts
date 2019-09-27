@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'team',
     loadChildren: () => import('./team/team.module').then(m => m.TeamModule)
   },
+  {
+    path: 'scrum',
+    loadChildren: () => import('./scrum/scrum.module').then(m => m.ScrumModule)
+  },
   { path: '',
     redirectTo: '/login',
     pathMatch: 'full'

@@ -8,7 +8,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -20,7 +21,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSelectModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatDialogModule
   ],
   exports: [
     MatInputModule,
@@ -31,7 +34,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatRadioModule,
     MatIconModule,
     ReactiveFormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatDialogModule
   ]
 })
 export class AngularMaterialModule { }
