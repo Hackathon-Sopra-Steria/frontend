@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
+  {
+    path: 'team',
+    loadChildren: () => import('./team/team.module').then(m => m.TeamModule)
+  },
   { path: '',
     redirectTo: '/login',
     pathMatch: 'full'
