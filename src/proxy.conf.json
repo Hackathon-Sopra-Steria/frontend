@@ -1,6 +1,0 @@
-{
-    "/api": {
-        "target": "10.94.32.221/api",
-        "secure": false
-    }
-}

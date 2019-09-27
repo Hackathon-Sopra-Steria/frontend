@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ILogin } from '../interfaces/login.interface';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable()
 export class LoginService {
-    constructor(private _httpClient: HttpClient) {}
+    constructor() {}
 
-    private readonly _CONTEXT = '/login';
+    private readonly _CONTEXT = '';
 
     login(payload: ILogin): Observable<any> {
-        return this._httpClient.post(environment + this._CONTEXT, payload);
+        return of(environment.MOCK_TOKEN);
     }
 }

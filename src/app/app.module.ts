@@ -7,7 +7,8 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from '../app/auth/auth.interceptor';
+import { GlobalInterceptor } from './shared/interceptors/global.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +25,11 @@ import { AuthInterceptor } from '../app/auth/auth.interceptor';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: GlobalInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
