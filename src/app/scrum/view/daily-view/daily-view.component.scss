@@ -1,0 +1,21 @@
+.daily-container {
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    
+    h1 {
+        text-align: center;
+    }
+
+    .daily-messages {
+        min-height: 400px;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .send-message {
+        color: #fff;
+    }
+}

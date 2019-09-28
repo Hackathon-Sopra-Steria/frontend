@@ -1,3 +1,21 @@
-<h1>
-    Daily Working
-</h1>
+<aside class="daily-container">
+    <h1>
+        Daily
+    </h1>
+    <div class="daily-messages">
+        <p *ngFor="let message of messages">
+            <span class="name">{{message.member}}</span> ha comentado: {{message.message}}
+        </p>
+    </div>
+    <div class="daily-messenger">
+        <form class="message-form" [formGroup]="messageForm">
+            <div class="">
+                <textarea  placeholder="" formControlName="message" cols="120" rows="5"></textarea>
+            </div>
+            <div>
+                <button mat-raised-button color="accent" (click)="send()"
+                class="send-message">Enviar mensaje</button>
+            </div>
+        </form>
+    </div>
+</aside>

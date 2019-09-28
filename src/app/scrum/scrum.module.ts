@@ -7,6 +7,8 @@ import { DailyViewComponent } from './view/daily-view/daily-view.component';
 import { PlanningViewComponent } from './view/planning-view/planning-view.component';
 import { RetroViewComponent } from './view/retro-view/retro-view.component';
 import { MySprintComponent } from './view/my-sprint/mySprint.component';
+import { DailyService } from './services/daily.service';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { MySprintComponent } from './view/my-sprint/mySprint.component';
     CommonModule,
     ScrumRouting,
     AngularMaterialModule
+  ],
+  providers: [
+    DailyService
   ]
 })
 export class ScrumModule { }
