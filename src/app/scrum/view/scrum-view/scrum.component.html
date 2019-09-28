@@ -11,14 +11,8 @@
         </div>
     </div>
     <div class="scrum-content">
-        <section *ngIf="showDaily">
-            daily
-        </section>
-        <section *ngIf="showPlanning">
-            planing
-        </section>
-        <section *ngIf="showRetro">
-            show_Retro
-        </section>
+        <app-daily-view *ngIf="showDaily"></app-daily-view>
+        <app-planning-view *ngIf="showPlanning"></app-planning-view>
+        <app-retro-view *ngIf="showRetro"></app-retro-view>
     </div>
 </section>

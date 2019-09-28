@@ -6,6 +6,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { DailyViewComponent } from './view/daily-view/daily-view.component';
 import { PlanningViewComponent } from './view/planning-view/planning-view.component';
 import { RetroViewComponent } from './view/retro-view/retro-view.component';
+import { DailyService } from './services/daily.service';
 
 
 @NgModule({
@@ -19,6 +20,9 @@ import { RetroViewComponent } from './view/retro-view/retro-view.component';
     CommonModule,
     ScrumRouting,
     AngularMaterialModule
+  ],
+  providers: [
+    DailyService
   ]
 })
 export class ScrumModule { }

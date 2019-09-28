@@ -24,7 +24,6 @@ export class AuthViewComponent implements OnInit {
     send(): void {
         if(this.loginForm.valid) {
             this._loginService.login(this.loginForm.value).subscribe(response => {
-                console.log(response);
                 localStorage.setItem('token', response);
                 this._router.navigate(['team']);
             });
