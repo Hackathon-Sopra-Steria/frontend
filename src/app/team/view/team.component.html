@@ -1,15 +1,11 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>ClibApp</span>
-        <span class="example-fill-remaining-space"></span>
-        <span>Logros</span>
-        <span>User</span>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row class="nav-bar">
-        <span>Equipo</span>
-        <span>Scrum</span>
-        <span>Mensajes</span>
-        <span>Logros</span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div>
+    <h3>Mi equipo</h3>
+    <div class="team">
+        <button mat-button *ngFor="let member of teamMembers" (click)="openDialog()">
+            <h3>{{member.firstName + ' ' + member.lastName}}</h3>
+            <img src="{member.urlPhoto}">
+            <p>Perfil: {{member.workertype}}</p>
+            <p>Email: {{member.email}}</p>
+        </button>
+    </div>
+</div>
