@@ -3,6 +3,11 @@
         display:flex;
         justify-content: center;
 
-        .login {} 
+        .login {
+            .login-form {
+                display: flex;
+                flex-direction: column;
+            }
+        } 
     }
 }
