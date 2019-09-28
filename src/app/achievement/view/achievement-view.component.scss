@@ -9,14 +9,41 @@
   .achievement mat-button {
     border: solid rgba(0, 0, 0, 0.04) 1px;
     min-height: 150px;
-    text-align: center;
   }
 
   .achievement-card {
     display: flex;
+    padding: 1rem;
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 95px;
+      height: 95px;
     }
+  }
+
+  .achievementDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    align-items: flex-start;
+    p {
+      text-align: initial;
+    }
+  }
+
+  .image-achievement {
+    display: flex;
+    align-items: center;
+    img {
+      border-radius: 53%;
+    }
+  }
+
+  .card {
+    border-radius: 3%;
+    background-color: #D84315;
+    color: white;
+    opacity: 0.85;
+    font-size: 13px;
   }
