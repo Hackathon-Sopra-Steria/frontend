@@ -21,7 +21,7 @@ export class ScrumComponent implements OnInit{
   }
 
   public handleVisibilityTabs(path: string) {
-    switch(path) {
+    switch (path) {
       case 'daily':
         this.showDaily = true;
         this.showPlanning = false;
@@ -31,12 +31,12 @@ export class ScrumComponent implements OnInit{
           this.showDaily = false;
           this.showPlanning = true;
           this.showRetro = false;
-        break;
+          break;
       case 'retro':
           this.showDaily = false;
           this.showPlanning = false;
           this.showRetro = true;
-        break;
+          break;
     }
   }
 

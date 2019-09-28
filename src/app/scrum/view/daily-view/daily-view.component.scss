@@ -7,11 +7,15 @@
         text-align: center;
     }
 
+    .daily-messages {
+        min-height: 400px;
+    }
+
     .name {
         font-weight: bold;
     }
 
-    
-
-    
+    .send-message {
+        color: #fff;
+    }
 }

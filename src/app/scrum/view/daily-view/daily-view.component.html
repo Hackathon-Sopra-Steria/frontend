@@ -8,12 +8,13 @@
         </p>
     </div>
     <div class="daily-messenger">
-        <form class="example-form" [formGroup]="messageForm">
+        <form class="message-form" [formGroup]="messageForm">
             <div class="">
-                <textarea matInput placeholder="" formControlName="message"></textarea>
+                <textarea  placeholder="" formControlName="message" cols="120" rows="5"></textarea>
             </div>
             <div>
-                <button mat-button (click)="send()">Enviar mensaje</button>
+                <button mat-raised-button color="accent" (click)="send()"
+                class="send-message">Enviar mensaje</button>
             </div>
         </form>
     </div>

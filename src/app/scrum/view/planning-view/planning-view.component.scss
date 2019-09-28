@@ -1,0 +1,14 @@
+.planning {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 2rem;
+    .input-text {
+        display: flex;
+        align-items: baseline;
+        margin: 1rem;
+        input {
+            height: 2rem;
+        }
+    }
+}

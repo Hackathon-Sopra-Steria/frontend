@@ -1,3 +1,12 @@
-<h1>
-    Planning working
-</h1>
+<h2>Estimación de tareas - Sprint planning</h2>
+<div>
+    <div class="planning" *ngFor="let hu of backlog">
+        <div>
+            <h3>{{hu.title}}</h3>
+            <p>{{hu.description}}</p>
+        </div>
+        <div class="input-text">
+            <input type="number">días
+        </div>
+    </div>
+</div>
