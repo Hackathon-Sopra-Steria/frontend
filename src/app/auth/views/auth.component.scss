@@ -1,7 +1,11 @@
 :host {
+    opacity:1;
     .container {
         display:flex;
         justify-content: center;
+        background-image: url("../../../assets/images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg");
+        height: 100%;
+        width: 100%;
 
         .login {
             .login-form {

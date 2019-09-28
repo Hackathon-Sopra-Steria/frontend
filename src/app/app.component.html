@@ -1,4 +1,7 @@
-<app-header></app-header>
-<main class="container">
-  <router-outlet></router-outlet>
+<app-auth-view-component *ngIf="!userLogged" (emitLogin)="onEmitLogin($event)"></app-auth-view-component>
+<main *ngIf="userLogged">
+  <app-header></app-header>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </main>

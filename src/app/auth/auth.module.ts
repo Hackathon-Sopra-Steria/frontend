@@ -15,11 +15,11 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    AuthRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     AngularMaterialModule
   ],
-  providers: [LoginService]
+  providers: [LoginService],
+  exports: [AuthViewComponent, LoginService]
 })
 export class AuthModule { }
