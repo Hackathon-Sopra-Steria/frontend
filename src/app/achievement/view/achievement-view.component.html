@@ -1,0 +1,18 @@
+<h1>
+    Logros
+</h1>
+<div class="achievement">
+    <button mat-button *ngFor="let achievement of achievements">
+        <div class="achievement-card">
+            <div>
+                <img [src]="achievement.iconPath">
+                <p>Puntos: {{achievement.ruleCount}}</p>
+            </div>
+            <div >
+                <h3>{{achievement.name}}</h3>
+                <p>Perfil: {{achievement.description}}</p>
+            </div>
+        </div>
+
+    </button>
+</div>
