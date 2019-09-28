@@ -4,7 +4,7 @@
         <button mat-button *ngFor="let member of teamMembers" (click)="openDialog(member.id)">
             <h3>{{member.firstName + ' ' + member.lastName}}</h3>
             <img [src]="member.urlPhoto">
-            <p>Perfil: {{member.workertype}}</p>
+            <p>Perfil: {{member.workerType}}</p>
             <p>Email: {{member.email}}</p>
         </button>
     </div>

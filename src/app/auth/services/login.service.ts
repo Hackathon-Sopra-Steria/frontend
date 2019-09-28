@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class LoginService {
-    constructor() {}
+    constructor(private _httpClient: HttpClient) {}
 
     private readonly _CONTEXT = '';
 
