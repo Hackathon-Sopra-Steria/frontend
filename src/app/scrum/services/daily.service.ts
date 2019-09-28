@@ -20,7 +20,5 @@ export class DailyService {
         ]);
     }
 
-    public sendMessage(){
-        
-    }
+    public sendMessage(){}
 }
