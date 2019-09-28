@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { IAchievement } from '../interfaces/achievement.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class AchievementService {
-    constructor() {}
+    constructor(private _httpClient: HttpClient) {}
 
     getAchievements(): Observable<IAchievement[]> {
         return of([

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   API_AUTH_URL: '/api/login',
-  API_TEAMS_URL: '/api/teams',
+  API_TEAMS_URL: 'http://192.168.0.105:8089/api/teams/all',
   API_ACHIEVEMENTS_URL: '/api/achievements',
   MOCK_TOKEN: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIlVzZXJJZCI6IjEiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE1Njk2MjY5MjN9.8Ggv1jYAZ6rc52x8b_nuHkMSP4pEsKXbZedS2gG1oio'
 };
