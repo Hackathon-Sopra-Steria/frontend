@@ -1,1 +1,26 @@
-<h1>Modal!</h1>
+<div mat-dialog-content>
+    <div class="team">
+        <div class="detail-row header" *ngIf="data.member">
+            <div class="close-button">
+                <button mat-button (click)="onCloseClick()">
+                    <img class="icon" src="../../../assets/icons/clear-24px.svg"/>
+                </button>
+            </div>
+            <div class="modal-header">
+                <img src="{data.member.urlPhoto}">
+                <div class="member-info">
+                    <h2>{{data.member.firstName + ' ' + data.member.lastName}}</h2>
+                    <span>Email: {{data.member.email}}</span>
+                    <span>Perfil: {{data.member.workertype}}</span>
+                </div>
+            </div>
+            <div class="message">
+                <textarea name="messageMember" id="messageMember" cols="80" rows="10" #messageMember></textarea>
+            </div>
+            <div class="member-buttons">
+                <button mat-raised-button (click)="sendMessage(messageMember.value)" [disabled]="!messageMember.value">Enviar mensaje</button>
+                <button mat-raised-button color="accent" (click)="comeToMe()">Ven a mi mesa</button>
+            </div>
+        </div>
+    </div>
+</div>
