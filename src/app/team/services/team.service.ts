@@ -11,13 +11,8 @@ export class TeamService {
   constructor(private http: HttpClient) { }
 
   getTeamMembers(): Observable<object> {
-    const endpoint = environment.api.API_URL + environment.api.team;
+    const endpoint = environment.api.API_TEAMS_URL + '/all'
     return this.http.get<object>(endpoint);
-  }
-
-  postMemberMessage(message, id): Observable<object> {
-    const endpoint = environment.api.API_URL + environment.api.messageTeam.replace(':id', id.toString());
-    return this.http.post<object>(endpoint, message);
   }
 
 }

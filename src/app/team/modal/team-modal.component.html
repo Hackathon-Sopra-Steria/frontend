@@ -7,7 +7,7 @@
                 </button>
             </div>
             <div class="modal-header">
-                <img src="{data.member.urlPhoto}">
+                <img class="urlPhoto" [src]="data.member.urlPhoto">
                 <div class="member-info">
                     <h2>{{data.member.firstName + ' ' + data.member.lastName}}</h2>
                     <span>Email: {{data.member.email}}</span>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="message">
-                <textarea name="messageMember" id="messageMember" cols="80" rows="10" #messageMember></textarea>
+                <textarea name="messageMember" id="messageMember" cols="60" rows="10" #messageMember></textarea>
             </div>
             <div class="member-buttons">
                 <button mat-raised-button (click)="sendMessage(messageMember.value)" [disabled]="!messageMember.value">Enviar mensaje</button>

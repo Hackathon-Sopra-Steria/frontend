@@ -10,48 +10,7 @@ import { TeamService } from '../services/team.service';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  teamMembers = [
-    {
-      id: 1,
-      firstName: 'Bladi',
-      lastName: 'del Barrio',
-      workertype: 'backend',
-      email: 'dsasjd@gmail.com',
-      urlPhoto: 'https://c.stocksy.com/a/0w1500/z9/1199080.jpg?1569622763'
-    },
-    {
-      id: 2,
-      firstName: 'Bladi',
-      lastName: 'del Barrio',
-      workertype: 'backend',
-      email: 'dsasjd@gmail.com',
-      urlPhoto: 'http/sdasd'
-    },
-    {
-      id: 3,
-      firstName: 'Bladi',
-      lastName: 'del Barrio',
-      workertype: 'backend',
-      email: 'dsasjd@gmail.com',
-      urlPhoto: 'http/sdasd'
-    },
-    {
-      id: 4,
-      firstName: 'Bladi',
-      lastName: 'del Barrio',
-      workertype: 'backend',
-      email: 'dsasjd@gmail.com',
-      urlPhoto: 'http/sdasd'
-    },
-    {
-      id: 5,
-      firstName: 'Bladi',
-      lastName: 'del Barrio',
-      workertype: 'backend',
-      email: 'dsasjd@gmail.com',
-      urlPhoto: 'http/sdasd'
-    },
-  ];
+  teamMembers = [];
 
   constructor (
     public modal: MatDialog,
@@ -59,9 +18,9 @@ export class TeamComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.teamService.getTeamMembers().subscribe((response: Member) => {
-    //     this.teamMembers = response;
-    // });
+    this.teamService.getTeamMembers().subscribe((response: any) => {
+      this.teamMembers = response;
+    });
   }
 
   openDialog(id) {

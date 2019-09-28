@@ -1,14 +1,35 @@
 {
     "/api/login": {
-        "target": "http://192.168.1.144:8088/api/login",
+        "target": "http://localhost:8088/",
         "secure": false
     },
     "/api/teams": {
-        "target": "http://192.168.1.144:8088/api/teams",
+        "target": "http://localhost:8089/",
         "secure": false
     },
     "/api/achievements": {
-        "target": "http://192.168.1.144:8088/api/achievements",
+        "target": "http://localhost:8087/",
+        "secure": false
+    },
+    "/api/daily": {
+        "target": "http://localhost:8086/",
+        "secure": false
+    },
+    "/api/planning": {
+        "target": "http://localhost:8085/",
+        "secure": false
+    },
+    "/api/retro": {
+        "target": "http://localhost:8084/",
+        "secure": false
+    },
+    "/api/chat": {
+        "target": "http://localhost:8083/",
+        "secure": false
+    },
+     "/api/mysprint": {
+        "target": "http://localhost:8082/",
         "secure": false
     }
+
 }
