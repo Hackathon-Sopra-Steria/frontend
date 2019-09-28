@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./auth.component.scss']
 })
 export class AuthViewComponent implements OnInit {
+    @Output() emitLogin = new EventEmitter();
 
     public loginForm: FormGroup;
 
@@ -25,7 +26,7 @@ export class AuthViewComponent implements OnInit {
         if(this.loginForm.valid) {
             this._loginService.login(this.loginForm.value).subscribe(response => {
                 localStorage.setItem('token', response);
-                this._router.navigate(['team']);
+                this.emitLogin.emit('logged');
             });
         }
     }

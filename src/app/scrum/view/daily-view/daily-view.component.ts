@@ -31,7 +31,6 @@ export class DailyViewComponent implements OnInit {
 
     public send() {
         this.messages.push(this.createNewMessage());
-        this._dailyService.sendMessage();
     }
 
     public createNewMessage() {

@@ -6,6 +6,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { DailyViewComponent } from './view/daily-view/daily-view.component';
 import { PlanningViewComponent } from './view/planning-view/planning-view.component';
 import { RetroViewComponent } from './view/retro-view/retro-view.component';
+import { MySprintComponent } from './view/my-sprint/mySprint.component';
 import { DailyService } from './services/daily.service';
 
 
@@ -14,7 +15,8 @@ import { DailyService } from './services/daily.service';
     ScrumComponent,
     DailyViewComponent,
     PlanningViewComponent,
-    RetroViewComponent
+    RetroViewComponent,
+    MySprintComponent
   ],
   imports: [
     CommonModule,

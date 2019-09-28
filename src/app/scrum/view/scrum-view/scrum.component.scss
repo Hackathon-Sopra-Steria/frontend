@@ -11,7 +11,7 @@
     flex: 1;
     justify-content: space-evenly;
     padding-right: 3rem;
-    border-right: 1px solid black;
+    border-right: 1px solid #D84315;
 }
 
 .scrum-content {
@@ -20,8 +20,14 @@
 }
 
 .card-scrum-action {
-    border: 1px solid #000;
+    border: 1px solid black;
+    border-radius: 5%;
     padding: 30px;
     margin-top: 10px;
     text-align: center;
+    &:hover, &:active, &:focus {
+        background-color: #FF5722;
+        color: white;
+        border: 1px solid white;
+    }
 }

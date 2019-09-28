@@ -11,6 +11,7 @@ export class ScrumComponent implements OnInit{
   public showDaily: boolean;
   public showPlanning: boolean;
   public showRetro: boolean;
+  public showMySprint: boolean;
 
   constructor(private _router: Router) { }
 
@@ -18,6 +19,7 @@ export class ScrumComponent implements OnInit{
     this.showDaily = true;
     this.showPlanning = false;
     this.showRetro = false;
+    this.showMySprint = false;
   }
 
   public handleVisibilityTabs(path: string) {
@@ -26,17 +28,26 @@ export class ScrumComponent implements OnInit{
         this.showDaily = true;
         this.showPlanning = false;
         this.showRetro = false;
+        this.showMySprint = false;
         break;
       case 'planning':
           this.showDaily = false;
           this.showPlanning = true;
           this.showRetro = false;
+          this.showMySprint = false;
           break;
       case 'retro':
           this.showDaily = false;
           this.showPlanning = false;
           this.showRetro = true;
+          this.showMySprint = false;
           break;
+      case 'mySprint':
+        this.showDaily = false;
+        this.showPlanning = false;
+        this.showRetro = false;
+        this.showMySprint = true;
+        break;
     }
   }
 

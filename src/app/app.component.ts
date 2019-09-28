@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clib-app';
+
+  userLogged: boolean;
+
+  constructor() {
+    this.userLogged = false;
+  }
+
+  onEmitLogin(info: string){
+    this.userLogged = true;
+  }
 }

@@ -4,10 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: 'login',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
-  },
+  
   {
     path: 'team',
     loadChildren: () => import('./team/team.module').then(m => m.TeamModule)
@@ -21,7 +18,7 @@ const routes: Routes = [
     loadChildren: () => import('./achievement/achievement.module').then(m => m.AchievementModule)
   },
   { path: '',
-    redirectTo: '/login',
+    redirectTo: 'team',
     pathMatch: 'full'
   },
 ];

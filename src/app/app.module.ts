@@ -9,12 +9,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GlobalInterceptor } from './shared/interceptors/global.interceptor';
+import { AuthViewComponent } from './auth/views/auth.component';
+import { LoginService } from './auth/services/login.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AuthViewComponent
   ],
   imports: [
     BrowserModule,
@@ -24,14 +28,15 @@ import { GlobalInterceptor } from './shared/interceptors/global.interceptor';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: GlobalInterceptor,
       multi: true
-    }
+    },
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

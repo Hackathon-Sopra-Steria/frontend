@@ -1,18 +1,22 @@
 <section class="scrum-container">
     <div class="scrum-actions">
         <div class="card-scrum-action" (click)="handleVisibilityTabs('daily')">
-            daily
+            Daily
+        </div>
+        <div class="card-scrum-action" (click)="handleVisibilityTabs('mySprint')">
+            Mi sprint
         </div>
         <div class="card-scrum-action" (click)="handleVisibilityTabs('planning')">
-            planning
+            Planning
         </div>
         <div class="card-scrum-action" (click)="handleVisibilityTabs('retro')">
-            retro
+            Retro
         </div>
     </div>
     <div class="scrum-content">
         <app-daily-view *ngIf="showDaily"></app-daily-view>
         <app-planning-view *ngIf="showPlanning"></app-planning-view>
+        <app-sprint-view *ngIf="showMySprint"></app-sprint-view>
         <app-retro-view *ngIf="showRetro"></app-retro-view>
     </div>
 </section>
