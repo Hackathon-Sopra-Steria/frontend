@@ -1,29 +1,28 @@
-// import {Component, Inject} from '@angular/core';
-// import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {Component, Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Member } from '../interfaces/team-member.interface';
 
+@Component({
+    selector: 'app-team-modal',
+    templateUrl: './team-modal.component.html',
+    styleUrls: ['./team-modal.component.scss']
+  })
+  export class TeamModal {
 
-// @Component({
-//   selector: 'dialog-overview-example',
-//   templateUrl: 'dialog-overview-example.html',
-//   styleUrls: ['dialog-overview-example.css'],
-// })
-// export class DialogOverviewExample {
+    constructor(
+      public dialogRef: MatDialogRef<TeamModal>,
+      @Inject(MAT_DIALOG_DATA) public data: Member) {}
 
-//   animal: string;
-//   name: string;
+    onCloseClick(): void {
+      this.dialogRef.close();
+    }
 
-//   constructor(public dialog: MatDialog) {}
+    sendMessage(text) {
+      this.dialogRef.close({event: text});
+    }
 
-//   openDialog(): void {
-//     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-//       width: '250px',
-//       data: {name: 'hola', animal: 'X'}
-//     });
+    comeToMe() {
+      this.dialogRef.close({event: 1});
+    }
 
-//     dialogRef.afterClosed().subscribe(result => {
-//       console.log('The dialog was closed');
-//       this.animal = result;
-//     });
-//   }
-
-// }
+}
