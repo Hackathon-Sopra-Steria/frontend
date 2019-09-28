@@ -1,6 +1,6 @@
 .scrum-container {
     width: 100%;
-    height: auto;
+    height: 90%;
     margin: 10px;
     display: flex;
 }
@@ -9,11 +9,14 @@
     display:flex;
     flex-direction: column;
     flex: 1;
-
+    justify-content: space-evenly;
+    padding-right: 3rem;
+    border-right: 1px solid black;
 }
 
 .scrum-content {
     flex: 2 0px;
+    padding-left: 3rem;
 }
 
 .card-scrum-action {
