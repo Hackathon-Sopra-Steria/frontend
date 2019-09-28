@@ -1,0 +1,41 @@
+@import '../../../variables.scss';
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.member-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    button:first-child {
+        background-color: $brown;
+    }
+    button:first-child:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+    button {
+        color: white;
+    }
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    text-align: center;
+}
+
+.close-button {
+    display: flex;
+    justify-content: flex-end;
+}

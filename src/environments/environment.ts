@@ -4,17 +4,14 @@
 
 export const environment = {
   production: false,
-  API_AUTH_URL: '/api/login',
-  API_TEAMS_URL: 'http://192.168.0.105:8089/api/teams/all',
-  API_ACHIEVEMENTS_URL: '/api/achievements',
-  MOCK_TOKEN: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIlVzZXJJZCI6IjEiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE1Njk2MjY5MjN9.8Ggv1jYAZ6rc52x8b_nuHkMSP4pEsKXbZedS2gG1oio'
+  MOCK_TOKEN: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIlVzZXJJZCI6IjEiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE1Njk2MjY5MjN9.8Ggv1jYAZ6rc52x8b_nuHkMSP4pEsKXbZedS2gG1oio',
+  api: {
+    API_URL: 'http://10.94.33.140',
+    team: '/team',
+    messageTeam: '/team/:id',
+    API_AUTH_URL: 'http://10.94.32.221:8088/api/login',
+    API_TEAMS_URL: 'http://10.94.32.221:8088/api/teams',
+    API_ACHIEVEMENTS_URL: 'http://10.94.32.221:8088/api/achievements',
+  }
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
